@@ -71,7 +71,7 @@ Vector<char*> Utility::split(char* text)
 size_t Utility::checkTheOperation(char* text)
 {
 	Vector<char*> part = split(text);
-	for (size_t i = 0; i < 7; i++)
+	for (size_t i = 0; i < 9; i++)
 	{
 		if (strcmp(part[0], command[i]) == 0)
 		{
@@ -81,7 +81,7 @@ size_t Utility::checkTheOperation(char* text)
 	return -1;
 }
 
-void Utility::print(Vector<Figures*> figures)
+void Utility::print(Vector<Figures*>& figures)
 {
 	for (size_t i = 0; i < figures.length(); i++)
 	{
@@ -91,13 +91,16 @@ void Utility::print(Vector<Figures*> figures)
 
 void Utility::help()
 {
-	std::cout << "Help - prints this information" << std::endl;
-	std::cout << "Exit - you are exiting the program" << std::endl;
-	std::cout << "Print - prints all of your figures" << std::endl;
-	std::cout << "Create - creating a new figure" << std::endl;
-	std::cout << "Erase <n> - deleting the n-th figure" << std::endl;
-	std::cout << "Translate [<n>} - translates the n-th figure or all figures if there is no n" << std::endl;
-	std::cout << "Within <option> - print figures that are within selcted figure" << std::endl;
+	std::cout << "The following commands are supported: " << std::endl;
+	std::cout << "open <file>    opens <file>" << std::endl;
+	std::cout << "close            closes currently opened file" << std::endl;
+	std::cout << "save            saves the currently open file" << std::endl;
+	std::cout << "saveas <file>    saves the currently open file in <file>" << std::endl;
+	std::cout << "help            prints this information" << std::endl;
+	std::cout << "exit            exists the program" << std::endl;
+	std::cout << "print           prints all figures" << std::endl;
+	std::cout << "create         creates figure" << std::endl;
+	std::cout << "erase <n>      deletes the <n>th figure" << std::endl;
 }
 
 void Utility::save(Vector<Figures*>& figures, const char* namef)

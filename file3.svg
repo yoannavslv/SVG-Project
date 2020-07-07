@@ -2,5 +2,7 @@
 <!DOCTYPE svg PUBLIC " -//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg>
-<circle cx="6" cy="8" r="9" fill="pink" />
+<rect x="5" y="2" width="3" height="5" fill="pink" >
+<circle cx="2" cy="5" r="6" fill="white" />
+<circle cx="2" cy="3" r="6" fill="pink" />
 </svg>
